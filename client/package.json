@@ -1,0 +1,23 @@
+{
+  "name": "reminders",
+  "version": "1.0.0",
+  "description": "to remind oneself of things",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/industriousparadigm/reminders.git"
+  },
+  "keywords": [
+    "reminders",
+    "forget"
+  ],
+  "author": "diogo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/industriousparadigm/reminders/issues"
+  },
+  "homepage": "https://github.com/industriousparadigm/reminders#readme"
+}
