@@ -1,0 +1,28 @@
+{
+  "name": "reminders",
+  "version": "1.0.0",
+  "description": "server side for reminders app by diogo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/industriousparadigm/reminders.git"
+  },
+  "keywords": [
+    "reminders"
+  ],
+  "author": "diogo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/industriousparadigm/reminders/issues"
+  },
+  "homepage": "https://github.com/industriousparadigm/reminders#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "sequelize": "^5.8.6",
+    "sqlite3": "^4.0.8"
+  }
+}

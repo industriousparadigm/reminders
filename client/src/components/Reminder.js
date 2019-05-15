@@ -1,0 +1,21 @@
+import React, { Component } from 'react'
+
+class Reminder extends Component {
+  render() { 
+    return (
+      <div className="reminder-card card bg-light mb-3">
+        <div className="card-body">
+          <h5 className="card-title">{this.props.content}</h5>
+          <p className="card-text"><small className="text-muted">home, supermarket</small></p>
+          <span class="badge badge-pill badge-danger d-block">48h left</span>
+
+          <button className="btn btn-success">
+            Done
+          </button>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Reminder
