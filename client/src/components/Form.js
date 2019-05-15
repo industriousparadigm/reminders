@@ -19,9 +19,7 @@ class Form extends React.Component {
         selectedCategories.push(allOptions[i])
       }
     }
-
     this.setState({ selectedCategories })
-    
   }
 
   render() {
