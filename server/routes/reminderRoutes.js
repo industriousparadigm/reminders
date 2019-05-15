@@ -24,7 +24,8 @@ module.exports = function(router) {
 
   router.post("/reminders", (req, res) => {
     Reminder.create({
-      name: req.body.name
+      content: req.body.content,
+      due: req.body.due
     })
       .then(res => {
         res.json(res);

@@ -24,8 +24,8 @@ module.exports = function(router) {
     Categorization.create({
       reminderId: req.body.reminderId,
       categoryId: req.body.categoryId
-    }).then(res => {
-      res.json(res);
+    }).then(resp => {
+      res.json(resp);
     });
   });
 
