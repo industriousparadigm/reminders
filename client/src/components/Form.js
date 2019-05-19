@@ -22,10 +22,15 @@ class Form extends React.Component {
     this.setState({ selectedCategories })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(event.target)
+  }
+
   render() {
     return (
       <section className="app-body">
-        <form className="form-group">
+        <form className="form-group" onSubmit={this.handleSubmit}>
           <div className="form-group mb-2 input-align">
             <textarea className="form-control" id="input-reminder" rows="2" placeholder="type reminder here"></textarea>
           </div>
@@ -40,7 +45,7 @@ class Form extends React.Component {
               <option>church</option>
             </select>
           </div>
-          <button type="button" id="add-btn" className="btn btn-warning btn-lg" onClick={this.props.handleClick} data-toggle="modal" data-target="#exampleModal">Post reminder</button>
+          <button type="button" id="add-btn" className="btn btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal">Post reminder</button>
         </form>
       </section>
     )

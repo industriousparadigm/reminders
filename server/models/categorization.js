@@ -1,12 +1,16 @@
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  const Categorization = sequelize.define('Categorization', {
-    reminder_id: DataTypes.INTEGER,
-    category_id: DataTypes.INTEGER
-  }, {});
+  const Categorization = sequelize.define(
+    "Categorization",
+    {
+      reminderId: DataTypes.INTEGER,
+      categoryId: DataTypes.INTEGER
+    },
+    {}
+  );
   Categorization.associate = function(models) {
-    Categorization.belongsTo(models.Reminder)
-    Categorization.belongsTo(models.Category)
+    Categorization.belongsTo(models.Reminder);
+    Categorization.belongsTo(models.Category);
   };
   return Categorization;
 };
