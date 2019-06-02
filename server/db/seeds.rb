@@ -1,0 +1,16 @@
+Reminder.create(content: "do the dishes")
+Reminder.create(content: "collect suit from 5 a sec")
+Reminder.create(content: "create a reminders app to put all these reminders in")
+Reminder.create(content: "buy cheese for friday burgers")
+Reminder.create(content: "drink all the beer while WeWork card lasts")
+Reminder.create(content: "call grandma")
+
+Category.create(name: "home")
+Category.create(name: "supermarket")
+Category.create(name: "work")
+Category.create(name: "school")
+Category.create(name: "family")
+Category.create(name: "friends")
+Category.create(name: "church")
+Category.create(name: "finance")
+

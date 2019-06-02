@@ -1,19 +1,13 @@
 import React from 'react'
 
-// import categories from '../categories'
+const Form = props => {
+  const { shown, toggleForm, handleSubmit } = props
 
+  return (
 
-class Form extends React.Component {
-
-  state = {
-    reminderContent: "",
-    selectedCategories: []
-  }
-
-  render() {
-    return (
-      <section className="app-body">
-        <form className="form-group" onSubmit={this.props.handleSubmit}>
+    <section className="app-body">
+      {
+        shown && <form className="form-group">
           <div className="form-group mb-2 input-align">
             <textarea className="form-control" id="input-reminder" rows="2" placeholder="type reminder here"></textarea>
           </div>
@@ -29,11 +23,12 @@ class Form extends React.Component {
               <option>finance</option>
             </select>
           </div>
-          <button type="submit" id="add-btn" className="btn btn-warning btn-lg">Post reminder</button>
+          <button type="submit" className="btn btn-warning btn-lg" onClick={handleSubmit}>Submit</button>
+          <button className="btn btn-danger btn-lg" onClick={toggleForm}>Back</button>
         </form>
-      </section>
-    )
-  }
+      }
+    </section>
+  )
 }
 
 export default Form
