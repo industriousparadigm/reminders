@@ -7,16 +7,34 @@ class RemindersBoard extends React.Component {
     reminders: []
   }
 
+  getReminders = () => {
+    return fetch("http://localhost:3001/reminders")
+      .then(resp => resp.json())
+  }
+
+  componentDidMount () {
+    this.getReminders()
+      .then(reminders =>
+        this.setState({ reminders })
+      )
+  }
+  
+  displayReminders = () => {
+    return this.state.reminders.map(reminder =>
+      !reminder.complete && <Reminder key={reminder.id} reminder={reminder} handleClick={this.handleClickDone}/>
+    )
+  }
+
+  handleClickDone = (reminderId) => {
+    const updatedReminders = this.state.reminders
+    this.setState({ reminders: updatedReminders.filter(reminder => reminder.id !== reminderId)})
+  }
+
   render() {
 
     return (
       <section className="app-body">
-        <Reminder content="buy toilet paper" />
-        <Reminder content="pay the internet bills" />
-        <Reminder content="beat candy crush level 89 to get bonus jewels" />
-        <Reminder content="review Nico's lecture on rails server for this app" />
-        <Reminder content="buy flowers to apologize for any potential misdemeanors this week" />
-        <Reminder content="implement codenames" />
+        {this.displayReminders()}
       </section>
     )
   }
